@@ -15,6 +15,7 @@ const BoxContent = styled.div`
   width: 90%;
   max-width: 1200px;
   height: 800px;
+  max-height: 90vh;
   background-color: #A829E8;
   border: 2px solid #A829E8;
   border-radius: 10px;

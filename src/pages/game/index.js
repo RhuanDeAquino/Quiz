@@ -52,6 +52,12 @@ const ContentResult = styled.div`
   flex-direction: column;
   margin: auto;
   max-width: 800px;
+  width: 100%;
+
+  > img {
+    width: 100%;
+    margin: 1rem 0 7rem 0;
+  }
 `
 
 const Quiz = () => {
@@ -86,7 +92,7 @@ const Quiz = () => {
       answer: 'Enquanto o Neymar jogava la?',
     },
     {
-      pergunta: 'Qual é o nome da banda formada pelo Jorel e seus amigos que tocam rock na série "Irmão do Jorel ?',
+      pergunta: 'Qual é o nome da banda do Carlos Felino ?',
       options: ['The Shostners', 'Cocô Mágico', 'Sprok Band', 'Cuecas em Chamas'],
       answer: 'Cuecas em Chamas',
     },
@@ -125,6 +131,10 @@ const Quiz = () => {
   };
 
   const isLastQuestion = currentQuestion === questions.length - 1;
+
+  const recarregar = () => {
+    window.location.reload();
+  };
   return (
     <Content>
       {currentQuestion < questions.length ? (
@@ -136,6 +146,7 @@ const Quiz = () => {
         />
       ) : (
         <ContentResult>
+          <p>Seu resultado foi {score}</p>
           <img
             src={
               score >= 0 && score <= 300
@@ -148,8 +159,9 @@ const Quiz = () => {
             }
             alt="Resultado"
           />
-
-          <p>Seu resultado foi {score}</p>
+          <Button onClick={() => recarregar()}>
+            Jogar Novamente
+          </Button>
         </ContentResult>
       )}
 

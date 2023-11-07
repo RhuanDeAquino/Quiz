@@ -3,12 +3,18 @@ import styled from 'styled-components';
 
 const Content = styled.div`
   width: 100%;
-  height: 50%;
+  height: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+
+  > h2 {
+    @media(max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
 
   > ul {
     list-style: none;
@@ -17,6 +23,10 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    @media(max-width: 600px) {
+      flex-direction: column;
+    }
 
     > li {
       width: calc(50% - 0.5rem);
@@ -29,6 +39,12 @@ const Content = styled.div`
       border: 5px solid #fff;
       border-radius: 12px;
       color: #fff;
+
+      @media(max-width: 600px) {
+      width: 100%;
+      font-size: 1rem;
+      height: 3rem;
+    }
     }
   }
 `;
