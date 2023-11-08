@@ -9,6 +9,7 @@ const Content = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+  color: #fff;
 
   > h2 {
     @media(max-width: 600px) {

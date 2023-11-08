@@ -16,13 +16,14 @@ const Button = styled.button`
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid red;
-  padding: 10px 20px;
+  padding: 1rem 3rem;
   font-size: 17px;
   font-weight: bold;
   background: transparent;
   position: relative;
   transition: all 1s;
   overflow: hidden;
+  cursor: pointer;
 
   &:hover {
     color: white;

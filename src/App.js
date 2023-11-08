@@ -6,18 +6,19 @@ const Content = styled.main`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: #ffff00;
+  justify-content: center;
+  background-image: url("https://img.elo7.com.br/product/zoom/38BCBAB/tecido-xadrez-cowboy-toy-story-140-cm-x-50-cm-tecidos-estampados.jpg");
 `
 
 const BoxContent = styled.div`
-  width: 90%;
-  max-width: 1200px;
-  height: 800px;
-  max-height: 90vh;
-  background-color: #A829E8;
-  border: 2px solid #A829E8;
+  max-width: 800px;
+  max-height: 800px;
+  width: 95vw;
+  height: 90vh;
+  background-color: #191970;
+  border: 5px solid #191970;
   border-radius: 10px;
   box-shadow: 8px 10px 0 #000;
   padding: 1rem;
@@ -31,36 +32,45 @@ const BoxContent = styled.div`
     width: 300px;
     height: 300px;
   }
+
+  > h1 {
+    color: #fff;
+    font-family: 'Federant', serif;
+    font-size: 4rem;
+
+    > p {
+      margin: 0;
+      font-size: 2rem;
+      color: red;
+    }
+  }
 `
 
 const ButtonStart = styled.button`
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff80;
-  text-shadow: none;
-  background: transparent;
-  box-shadow: transparent;
-  border: 1px solid #ffffff80;
-  transition: 0.5s ease;
-  user-select: none;
+  width: auto;
+  height: 60px;
+  border: 3px solid green;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiZ6X3LUT7u4hgHwJhXHdg78ARxNL3prCczPJHpdeO7NGthIOnOWysoJjeKx91gI2epn8&usqp=CAU ");
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.7rem;
+  color: red;
+  font-weight: 600;
 
-  &:hover, &:focus {
-    color: #ffffff;
-    background: #008cff;
-    border: 1px solid #008cff;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
-    font-size: 16px;
-    border-color: transparent;
+  &:hover {
+    background: green;
+    color: white;
+    font-size: 1.5em;
   }
 `;
 
 
 const BoxButton = styled.div`
-width: 100 %;
+width: 100%;
 height: 100px;
 display: flex;
 align-items: flex-end;
@@ -74,8 +84,10 @@ const App = () => {
       <BoxContent>
         {start ?
           <>
-            <h1> Quiz de coisas aleatoriamente aleatorias</h1>
-            <img src="https://i.pinimg.com/originals/ed/05/b8/ed05b8eb1f74aec520f26ed7e4aa3220.jpg" alt="img" />
+            <h1> Quiz
+              <p>de coisas aleatoriamente aleatorias</p>
+            </h1>
+            <img src="https://media.tenor.com/bhW1pGGR9jcAAAAj/meme-knuckles.gif" alt="img" />
             <BoxButton>
               <ButtonStart id="btn" onClick={() => setstart(!start)}>
                 Boralá começar ❱❱❱
